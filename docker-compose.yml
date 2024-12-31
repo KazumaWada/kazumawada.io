@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/app  # ホストの app ディレクトリをコンテナ内の /app にマウント
+      - /app/node_modules  # node_modules をホスト側にマウントしない
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+    command: npm run dev

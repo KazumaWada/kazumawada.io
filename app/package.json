@@ -1,0 +1,23 @@
+{
+    "name": "kazumawada.io",
+    "version": "1.0.0",
+    "description": "i make stuff",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon index.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "ejs": "^3.1.9",
+      "gray-matter": "^4.0.3",
+      "marked": "^5.0.0",
+      "sanitize-html": "^2.7.1"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.22"
+    },
+    "author": "Kazuma Wada",
+    "license": "MIT"
+}
+  
