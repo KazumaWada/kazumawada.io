@@ -15,10 +15,19 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// /blog
+app.get('/profile', (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "profile.html"));
+});
+
 app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, "public", "blog.html"));
 });
+
+app.get('/blog/:postId', (req, res) => {
+  const postId = req.params.postId; // "post1" など
+  res.sendFile(path.join(__dirname, "public", "blog", `${postId}.html`));
+});
+
 
 // /eigopencil
 app.get('/eigopencil', (req, res) => {
